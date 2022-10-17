@@ -1,17 +1,18 @@
 import './App.css';
 import Button from './Components/Button';
+import Count from './Components/Count';
 import CountLogo from './Image/CountIMG.png';
-
+import { useState } from 'react';
 
 function App() {
 
-  let count = 0;
+  const [count, setCount] = useState(0);
 
   const handleClick = ()  => {
-    count++;
+   setCount(count + 1) ;
   }
   const resetCount = () => {
-    count = 0;
+    setCount(0);
   }
 
   return (
@@ -25,6 +26,7 @@ function App() {
         />
       </div>
       <div className='main-container'>
+        <Count clicksCounter={count}/>
         <Button 
           text='Click me!'
           isClickButton={true}
@@ -32,7 +34,7 @@ function App() {
         />
         <Button
           text='Reset'
-          isClickButton={true}
+          isClickButton={false}
           handleClick={resetCount}
         />
       </div>
