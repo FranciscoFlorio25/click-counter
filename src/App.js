@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import CountLogo from './Image/CountIMG.png';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='Logo-container'>
+        <h1>Contador de click</h1>
+        <img
+          className='Logo-count'
+          src={CountLogo}
+          alt='Logo del contador'
+        />
+      </div>
+      <div className='main-container'>
+        
+      </div>
     </div>
   );
 }
